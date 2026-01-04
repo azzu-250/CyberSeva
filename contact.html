@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CyberSeva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="logo-text">CyberSeva</div>
+                <div class="sri-lanka-flag">
+                    <i class="fas fa-flag"></i> Sri Lanka
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="complaint.html" class="nav-link">File Complaint</a></li>
+                    <li><a href="track.html" class="nav-link">Track Status</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">Contact Sri Lanka Cyber Crime Headquarters</h2>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <h3>Address</h3>
+                    <p>Sri Lanka Cyber Crime Headquarters<br>
+                        Police Headquarters<br>
+                        Colombo 01, Sri Lanka</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                    <h3>Phone</h3>
+                    <p>General Inquiries: <strong>+94 11 2 441 144</strong><br>
+                        Emergency: <strong>119</strong><br>
+                        Cyber Crime: <strong>+94 11 2 441 155</strong></p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>General: <strong>info@cyberseva.gov.lk</strong><br>
+                        Complaints: <strong>complaints@cyberseva.gov.lk</strong><br>
+                        Support: <strong>support@cyberseva.gov.lk</strong></p>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send us a Message</h3>
+                <div class="form-group">
+                    <label for="contactName">Your Name</label>
+                    <input type="text" class="form-control" id="contactName" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="contactEmail">Email Address</label>
+                    <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="contactSubject">Subject</label>
+                    <input type="text" class="form-control" id="contactSubject" placeholder="Enter subject">
+                </div>
+                <div class="form-group">
+                    <label for="contactMessage">Message</label>
+                    <textarea class="form-control" id="contactMessage" rows="5" placeholder="Enter your message"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="sendMessage()">Send Message</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CyberSeva Sri Lanka</h3>
+                    <p>Official cyber crime reporting portal of the Sri Lanka Police Cyber Crime Division.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="complaint.html">File Complaint</a></li>
+                        <li><a href="track.html">Track Status</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Important Contacts</h3>
+                    <ul>
+                        <li>Police Emergency: <strong>119</strong></li>
+                        <li>Cyber Crime Helpline: <strong>+94 11 2 441 155</strong></li>
+                        <li>General Inquiries: <strong>+94 11 2 441 144</strong></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cyber Laws of Sri Lanka</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2023 CyberSeva - Sri Lanka Cyber Crime Headquarters. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your action has been completed successfully.</p>
+            <button class="btn btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSeva - Sri Lanka Cyber Crime Complaint Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/home.css">
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="logo-text">CyberSeva</div>
+                <div class="sri-lanka-flag">
+                    <i class="fas fa-flag"></i> Sri Lanka
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="complaint.html" class="nav-link">File Complaint</a></li>
+                    <li><a href="track.html" class="nav-link">Track Status</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="hero">
+                <h1>Report Cyber Crime in Sri Lanka</h1>
+                <p>CyberSeva is the official portal of Sri Lanka Cyber Crime Headquarters for reporting cyber crimes and ensuring digital safety for all citizens.</p>
+                <div class="hero-buttons">
+                    <a href="complaint.html" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> File a Complaint
+                    </a>
+                    <a href="contact.html" class="btn btn-outline">
+                        <i class="fas fa-info-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">8,542</div>
+                    <div class="stat-text">Complaints Resolved</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">623</div>
+                    <div class="stat-text">Active Cases</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">91%</div>
+                    <div class="stat-text">Success Rate</div>
+                </div>
+            </div>
+
+            <div class="features">
+                <h2 class="section-title">Our Services</h2>
+                <div class="features-grid" id="grid-id">
+                    <div class="feature-home">
+                        <div class="feature-icon"><i class="fas fa-lock"></i></div>
+                        <h3 class="feature-title">Secure Reporting</h3>
+                        <p>Report cyber crimes through our encrypted portal with options for anonymity when needed.</p>
+                    </div>
+                    <div class="feature-home">
+                        <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+                        <h3 class="feature-title">Status Tracking</h3>
+                        <p>Monitor your complaint's progress with our transparent tracking system.</p>
+                    </div>
+                    <div class="feature-home">
+                        <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="feature-title">Cyber Safety</h3>
+                        <p>Access resources to protect yourself from cyber threats and stay informed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CyberSeva Sri Lanka</h3>
+                    <p>Official cyber crime reporting portal of the Sri Lanka Police Cyber Crime Division.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="complaint.html">File Complaint</a></li>
+                        <li><a href="track.html">Track Status</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Important Contacts</h3>
+                    <ul>
+                        <li>Police Emergency: <strong>119</strong></li>
+                        <li>Cyber Crime Helpline: <strong>+94 11 2 441 155</strong></li>
+                        <li>General Inquiries: <strong>+94 11 2 441 144</strong></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cyber Laws of Sri Lanka</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2023 CyberSeva - Sri Lanka Cyber Crime Headquarters. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your action has been completed successfully.</p>
+            <button class="btn btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

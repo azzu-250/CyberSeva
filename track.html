@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Status - CyberSeva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/track.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="logo-text">CyberSeva</div>
+                <div class="sri-lanka-flag">
+                    <i class="fas fa-flag"></i> Sri Lanka
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="complaint.html" class="nav-link">File Complaint</a></li>
+                    <li><a href="track.html" class="nav-link active">Track Status</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">Track Your Complaint Status</h2>
+
+            <div class="feature-card">
+                <div class="form-group">
+                    <label for="trackingId">Enter Your Complaint ID</label>
+                    <input type="text" class="form-control" id="trackingId" placeholder="e.g., SLCC-2023-5876">
+                </div>
+                <button class="btn btn-primary" onclick="trackComplaint()">Track Complaint</button>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <h3>How to Track Your Complaint</h3>
+                <div class="feature-card">
+                    <p>After submitting your complaint, you will receive a unique Complaint ID via email.</p>
+                    <p>Use this ID to track the status of your complaint at any time.</p>
+                    <p>If you've lost your Complaint ID, you can contact our support team with your registered email address.</p>
+                </div>
+
+                <h3 style="margin-top: 30px;">Status Meanings</h3>
+                <div class="feature-card">
+                    <div class="status-item">
+                        <div class="status-info">
+                            <h4>Received</h4>
+                            <p>Your complaint has been successfully submitted and is awaiting review.</p>
+                        </div>
+                        <div class="status-badge status-received">Received</div>
+                    </div>
+
+                    <div class="status-item">
+                        <div class="status-info">
+                            <h4>Under Investigation</h4>
+                            <p>Our team is currently investigating your complaint.</p>
+                        </div>
+                        <div class="status-badge status-investigation">Under Investigation</div>
+                    </div>
+
+                    <div class="status-item">
+                        <div class="status-info">
+                            <h4>Resolved</h4>
+                            <p>Your complaint has been successfully resolved.</p>
+                        </div>
+                        <div class="status-badge status-resolved">Resolved</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CyberSeva Sri Lanka</h3>
+                    <p>Official cyber crime reporting portal of the Sri Lanka Police Cyber Crime Division.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="complaint.html">File Complaint</a></li>
+                        <li><a href="track.html">Track Status</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Important Contacts</h3>
+                    <ul>
+                        <li>Police Emergency: <strong>119</strong></li>
+                        <li>Cyber Crime Helpline: <strong>+94 11 2 441 155</strong></li>
+                        <li>General Inquiries: <strong>+94 11 2 441 144</strong></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cyber Laws of Sri Lanka</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2023 CyberSeva - Sri Lanka Cyber Crime Headquarters. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your action has been completed successfully.</p>
+            <button class="btn btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/track.js"></script>
+</body>
+</html>

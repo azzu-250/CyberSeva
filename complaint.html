@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Complaint - CyberSeva</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/complaint.css">
+</head>
+<body class="dark-theme">
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="logo-text">CyberSeva</div>
+                <div class="sri-lanka-flag">
+                    <i class="fas fa-flag"></i> Sri Lanka
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="complaint.html" class="nav-link active">File Complaint</a></li>
+                    <li><a href="track.html" class="nav-link">Track Status</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="about.html" class="nav-link">About Me</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h2 class="section-title">File a Cyber Crime Complaint</h2>
+
+            <div class="wizard-container">
+                <div class="wizard-steps">
+                    <div class="step active" data-step="1">
+                        1
+                        <span class="step-label">Personal Details</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        2
+                        <span class="step-label">Incident Details</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        3
+                        <span class="step-label">Evidence</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        4
+                        <span class="step-label">Review</span>
+                    </div>
+                </div>
+
+                <div class="wizard-form">
+                    <!-- Step 1: Personal Details -->
+                    <div class="form-step active" id="step-1">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" class="form-control" id="fullName" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address (optional)"></textarea>
+                        </div>
+                        <div class="wizard-nav">
+                            <button class="btn btn-outline" disabled>Previous</button>
+                            <button class="btn btn-primary" onclick="nextStep(1)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Incident Details -->
+                    <div class="form-step" id="step-2">
+                        <div class="form-group">
+                            <label for="category">Crime Category *</label>
+                            <select class="form-control" id="category" required>
+                                <option value="">Select a category</option>
+                                <option value="fraud">Online Fraud</option>
+                                <option value="hacking">Social Media Hacking</option>
+                                <option value="cyberbullying">Cyberbullying</option>
+                                <option value="phishing">Phishing</option>
+                                <option value="theft">Data Theft</option>
+                                <option value="harassment">Online Harassment</option>
+                                <option value="scam">Online Scam</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Incident Date *</label>
+                            <input type="date" class="form-control" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="time">Incident Time</label>
+                            <input type="time" class="form-control" id="time">
+                        </div>
+                        <div class="form-group">
+                            <label for="description">Incident Description *</label>
+                            <textarea class="form-control" id="description" rows="5" placeholder="Please provide detailed information about the incident" required></textarea>
+                        </div>
+                        <div class="wizard-nav">
+                            <button class="btn btn-outline" onclick="prevStep(2)">Previous</button>
+                            <button class="btn btn-primary" onclick="nextStep(2)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Evidence -->
+                    <div class="form-step" id="step-3">
+                        <div class="form-group">
+                            <label for="evidence">Upload Evidence</label>
+                            <input type="file" class="form-control" id="evidence" multiple>
+                            <small>You can upload screenshots, documents, or other evidence (Max 5 files, 10MB each)</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="links">Relevant Links</label>
+                            <input type="text" class="form-control" id="links" placeholder="Website URLs, social media profiles, etc.">
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="anonymous"> Report anonymously (your personal details will not be publicly shared)
+                            </label>
+                        </div>
+                        <div class="wizard-nav">
+                            <button class="btn btn-outline" onclick="prevStep(3)">Previous</button>
+                            <button class="btn btn-primary" onclick="nextStep(3)">Next</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Review -->
+                    <div class="form-step" id="step-4">
+                        <div class="feature-card">
+                            <h3>Review Your Complaint</h3>
+                            <div id="review-content">
+                                <p><strong>Name:</strong> <span id="review-name"></span></p>
+                                <p><strong>Email:</strong> <span id="review-email"></span></p>
+                                <p><strong>Phone:</strong> <span id="review-phone"></span></p>
+                                <p><strong>Category:</strong> <span id="review-category"></span></p>
+                                <p><strong>Date & Time:</strong> <span id="review-datetime"></span></p>
+                                <p><strong>Description:</strong> <span id="review-description"></span></p>
+                                <p><strong>Files:</strong> <span id="review-files">0 uploaded</span></p>
+                                <p><strong>Links:</strong> <span id="review-links"></span></p>
+                                <p><strong>Anonymous:</strong> <span id="review-anonymous">No</span></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="whatsapp-updates"> Receive status updates via WhatsApp
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label>
+                                <input type="checkbox" id="agree-terms" required> I confirm that the information provided is accurate
+                            </label>
+                        </div>
+                        <div class="wizard-nav">
+                            <button class="btn btn-outline" onclick="prevStep(4)">Previous</button>
+                            <button class="btn btn-primary" onclick="submitComplaint()">Submit Complaint</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CyberSeva Sri Lanka</h3>
+                    <p>Official cyber crime reporting portal of the Sri Lanka Police Cyber Crime Division.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="complaint.html">File Complaint</a></li>
+                        <li><a href="track.html">Track Status</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Me</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Important Contacts</h3>
+                    <ul>
+                        <li>Police Emergency: <strong>119</strong></li>
+                        <li>Cyber Crime Helpline: <strong>+94 11 2 441 155</strong></li>
+                        <li>General Inquiries: <strong>+94 11 2 441 144</strong></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cyber Laws of Sri Lanka</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                &copy; 2023 CyberSeva - Sri Lanka Cyber Crime Headquarters. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Popup Modal -->
+    <div class="modal-overlay" id="popupModal">
+        <div class="modal">
+            <div class="modal-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3 id="modalTitle">Success!</h3>
+            <p id="modalMessage">Your action has been completed successfully.</p>
+            <button class="btn btn-primary" onclick="closeModal()">OK</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/complaint.js"></script>
+</body>
+</html>
